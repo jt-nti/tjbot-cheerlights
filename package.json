@@ -1,0 +1,28 @@
+{
+  "name": "tjbot-cheerlights",
+  "version": "0.1.0",
+  "description": "Shine TJBot's LED in sync with cheerlights",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jt-nti/tjbot-cheerlights.git"
+  },
+  "keywords": [
+    "TJBot",
+    "CheerLights"
+  ],
+  "author": "James Taylor",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jt-nti/tjbot-cheerlights/issues"
+  },
+  "homepage": "https://github.com/jt-nti/tjbot-cheerlights#readme",
+  "dependencies": {
+    "mqtt": "^4.2.8",
+    "tjbot": "^2.0.1"
+  }
+}
