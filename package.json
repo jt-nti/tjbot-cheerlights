@@ -23,6 +23,6 @@
   "homepage": "https://github.com/jt-nti/tjbot-cheerlights#readme",
   "dependencies": {
     "mqtt": "^4.2.8",
-    "tjbot": "^2.0.1"
+    "tjbot": "^2.0.2"
   }
 }
