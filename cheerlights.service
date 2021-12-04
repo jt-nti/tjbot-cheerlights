@@ -1,0 +1,15 @@
+[Unit]
+Description=TJBot CheerLights 
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /home/pi/tjbot-cheerlights/index.js
+WorkingDirectory=/home/pi/tjbot-cheerlights
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
