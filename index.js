@@ -27,3 +27,14 @@ mqttClient.on('message', function (_topic, message) {
     console.log('updated')
   }
 })
+
+function handle(signal) {
+  console.log(`Handling ${signal}`);
+  tj.shine('off')
+  mqttClient.end(true)
+  process.exit(0)
+}
+
+process.on('SIGTERM', handle)
+process.on('SIGINT', handle)
+process.on('uncaughtException', handle)
