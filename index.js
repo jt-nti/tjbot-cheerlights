@@ -1,10 +1,11 @@
 const mqtt = require('mqtt')
-const TJBot = require('tjbot').default;
+const TJBot = require('tjbot').default
 
 const mqttClient = mqtt.connect('mqtt://mqtt.cheerlights.com')
 
-const tj = new TJBot();
-tj.initialize([TJBot.HARDWARE.LED_NEOPIXEL]);
+const tj = new TJBot()
+tj.initialize([TJBot.HARDWARE.LED_NEOPIXEL, TJBot.HARDWARE.SERVO])
+tj.shine('off')
 
 var previousColour = ''
 
@@ -12,6 +13,7 @@ mqttClient.on('connect', function () {
   mqttClient.subscribe('cheerlightsRGB', function (err) {
     if (!err) {
       console.log('Connected')
+      tj.wave()
     }
   })
 })
